@@ -4,54 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="303dp"
-        android:layout_height="298dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+    tools:context=".MainActivity"
+    android:background="@color/light_blue"
+    >
 
     <TextView
         android:id="@+id/myTasks"
         android:layout_width="285dp"
         android:layout_height="55dp"
         android:text="@string/my_tasks"
-        android:textSize="30sp"
+        android:textColor="@color/dark_blue"
+        android:textFontWeight="800"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.065" />
 
     <Button
         android:id="@+id/addTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/lighter_blue"
         android:text="@string/add_task"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.789" />
 
     <Button
         android:id="@+id/allTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/lighter_blue"
         android:text="@string/all_task"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.789" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="321dp"
+        android:layout_height="364dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/task_list_edited" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="22dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@drawable/settings" />
+
+    <Button
+        android:id="@+id/firstTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task1"
+        android:background="@color/yellow"
+        android:textColor="@color/lighter_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <Button
+        android:id="@+id/task2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task2"
+        android:background="@color/yellow"
+        android:textColor="@color/lighter_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926" />
+
+    <Button
+        android:id="@+id/task3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task3"
+        android:background="@color/yellow"
+        android:textColor="@color/lighter_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.924" />
 
 </android.support.constraint.ConstraintLayout>
