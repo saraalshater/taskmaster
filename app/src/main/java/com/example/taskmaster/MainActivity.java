@@ -1,10 +1,13 @@
 package com.example.taskmaster;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button task2Button = findViewById(R.id.task2);
-        task1Button.setOnClickListener(new View.OnClickListener() {
+        task2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent gotoTaskDetail = new Intent(MainActivity.this,TaskDetail.class);
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button task3Button = findViewById(R.id.task3);
-        task1Button.setOnClickListener(new View.OnClickListener() {
+        task3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent gotoTaskDetail = new Intent(MainActivity.this,TaskDetail.class);
@@ -78,5 +81,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        findViewById(R.id.settings).setOnClickListener(view -> {
+
+            Intent gotoSettings = new Intent(MainActivity.this,Settings.class);
+            startActivity(gotoSettings);
+        });
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences =  PreferenceManager.getDefaultSharedPreferences(this);
+String userName = sharedPreferences.getString("userName", "User");
+
+        TextView welcome = findViewById(R.id.welcomeMsg);
+        welcome.setText("welcome "+ userName);
     }
 }
