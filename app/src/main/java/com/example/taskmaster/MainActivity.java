@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView allTasksRecyclerView = findViewById(R.id.myRcyclerView);
         allTasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        allTasksRecyclerView.setAdapter(new TaskAdapter(taskData));
+
 
 
 
