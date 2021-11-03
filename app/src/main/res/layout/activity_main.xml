@@ -53,14 +53,14 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="321dp"
-        android:layout_height="364dp"
+        android:layout_width="165dp"
+        android:layout_height="194dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.542"
         app:srcCompat="@drawable/task_list_edited" />
 
     <ImageView
@@ -127,5 +127,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.073" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myRcyclerView"
+        android:layout_width="409dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
 
 </android.support.constraint.ConstraintLayout>
