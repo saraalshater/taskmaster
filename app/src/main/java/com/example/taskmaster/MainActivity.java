@@ -3,15 +3,18 @@ package com.example.taskmaster;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,17 +24,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ArrayList<Task> taskData = new ArrayList<Task>();
-        taskData.add(new Task("Eat","make a good meal today", "new"));
-        taskData.add(new Task("Exercise","play sport for 30min", "in progress"));
-        taskData.add(new Task("Labs","done your lab", "complete"));
-        taskData.add(new Task("sleep","get enough sleep", "complete"));
+//        ArrayList<Task> taskData = new ArrayList<Task>();
+//        taskData.add(new Task("Eat","make a good meal today", "new"));
+//        taskData.add(new Task("Exercise","play sport for 30min", "in progress"));
+//        taskData.add(new Task("Labs","done your lab", "complete"));
+//        taskData.add(new Task("sleep","get enough sleep", "complete"));
+        AppDatabase appDatabase;
+        appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "tasksDatabase").allowMainThreadQueries().build();
+        List<Task> taskData = appDatabase.taskDao().getAll();
 
 
         RecyclerView allTasksRecyclerView = findViewById(R.id.myRcyclerView);
         allTasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        allTasksRecyclerView.setAdapter(new TaskAdapter(taskData));
+        allTasksRecyclerView.setAdapter(new TaskAdapter((ArrayList<Task>) taskData));
 
 
 
