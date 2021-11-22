@@ -40,7 +40,7 @@ import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.AWSDataStorePlugin;
 import com.amplifyframework.datastore.generated.model.TaskClass;
 import com.amplifyframework.datastore.generated.model.Team;
-import com.google.android.play.core.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
@@ -292,6 +292,19 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+//        Button signOut=findViewById(R.id.logout);
+//        signOut.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Amplify.Auth.signOut(
+//                        () -> Log.i("AuthQuickstart", "Signed out successfully"),
+//                        error -> Log.e("AuthQuickstart", error.toString())
+//                );
+//                Intent intent = new Intent(MainActivity.this,SignUp.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
@@ -444,6 +457,7 @@ public class MainActivity extends AppCompatActivity {
                     applicationContext,
                     AWSMobileClient.getInstance(),
                     awsConfig);
+
 
             pinpointManager = new PinpointManager(pinpointConfig);
 
