@@ -1,0 +1,12 @@
+{
+  "resourceName": "taskMasterFiles",
+  "policyUUID": "557ada57",
+  "bucketName": "taskMasterBucket",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

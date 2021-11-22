@@ -15,5 +15,11 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "storage": {
+        "taskMasterFiles": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }

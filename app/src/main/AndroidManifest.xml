@@ -11,9 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Taskmaster">
+
+        <service android:name=".PushListenerService"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+        </service>
+
         <activity
             android:name=".VerificationActivity"
             android:exported="true" />
+
+
+
+
         <activity
             android:name=".SignIn"
             android:exported="true" />
